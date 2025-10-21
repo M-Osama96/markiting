@@ -1,0 +1,18 @@
+$font_name: "Vazirmatn", sans-serif;
+
+$weight_thin: 100;
+$weight_extralight: 200;
+$weight_light: 300;
+$weight_regular: 400;
+$weight_medium: 500;
+$weight_semibold: 600;
+$weight_bold: 700;
+$weight_extrabold: 800;
+$weight_black: 900;
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: $weight_regular;
+  line-height: 1.4;
+  color: $setting_text_color;
+}

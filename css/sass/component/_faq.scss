@@ -1,0 +1,153 @@
+.faq {
+  margin: 140px 0;
+  @include sm {
+    margin: 40px 0;
+  }
+}
+.faq-cont {
+  display: grid;
+  grid-template-columns: 553px 1fr;
+  gap: 52px;
+  @include md {
+    gap: 20px;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include xs {
+    align-items: center;
+  }
+  .faq-title {
+    font-size: 40px;
+    font-weight: $weight_bold;
+    color: darken($color: $setting_primary_color, $amount: 35%);
+    margin-bottom: 12px;
+    @include md {
+      font-size: 34px;
+    }
+    @include sm {
+      margin-bottom: 0;
+    }
+    @include xs {
+      font-size: 30px;
+    }
+  }
+  .accordion-item {
+    padding: 14px;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+    position: relative;
+    max-height: 66px;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    overflow: hidden;
+    @include xs {
+      padding: 8px;
+      border-radius: 8px;
+      max-height: 60px;
+    }
+    @include xxs {
+      max-height: 66px;
+    }
+    &.active-a {
+      max-height: 300px;
+      border: 2px solid $setting_primary_color;
+      hr {
+        opacity: 0.2;
+        visibility: visible;
+        margin: 12px 0;
+      }
+      .a-header-icon {
+        i {
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      width: 100%;
+      @include xxs {
+        gap: 10px;
+      }
+      .a-header-p {
+        font-size: 18px;
+        color: $setting_text_color;
+        font-weight: $weight_regular;
+        @include xxs {
+          font-size: 14px;
+        }
+      }
+      .a-header-icon {
+        width: 32px;
+        height: 32px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background-color: lighten($color: $setting_primary_color, $amount: 42%);
+        i {
+          color: $setting_primary_color;
+          font-size: 20px;
+        }
+      }
+    }
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #454545;
+      opacity: 20%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      max-width: 462px;
+      @include sm {
+        max-width: 100%;
+      }
+      p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: $weight-light;
+        @include xxs {
+          font-size: 14px;
+        }
+      }
+    }
+    &.active-a {
+      .accordion-content {
+        max-height: 200px;
+      }
+    }
+  }
+}
+.faq-img {
+  max-width: 535px;
+  aspect-ratio: 535/600;
+  @include md {
+    aspect-ratio: unset;
+  }
+  @include sm {
+    max-width: 100%;
+  }
+  img {
+    border-radius: 24px;
+    object-position: left;
+    @include sm {
+      border-radius: 14px;
+    }
+  }
+}
