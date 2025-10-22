@@ -1,0 +1,39 @@
+.breadcrumb-section {
+  margin: 32px 0 -52px;
+  @include sm {
+    margin: 20px 0 -20px;
+  }
+  .breadcrumb-content {
+    padding: 35px;
+    background-color: lighten($color: $setting_primary_color, $amount: 42%);
+    border-radius: 16px;
+    @include sm {
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .page-title {
+      font-weight: $weight_medium;
+      font-size: 24px;
+      margin-bottom: 8px;
+      @include sm {
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+    .breadcrumbs-menu {
+      display: flex;
+      gap: 4px;
+      @include sm {
+        display: none;
+      }
+      li:nth-of-type(1) {
+        font-size: 18px;
+      }
+      li:nth-of-type(2) {
+        font-size: 18px;
+        opacity: 0.5;
+      }
+    }
+  }
+}

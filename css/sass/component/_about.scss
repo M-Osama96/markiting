@@ -12,6 +12,17 @@
   align-items: center;
   gap: 80px;
   position: relative;
+  .about-page & {
+    padding: 51px 70px;
+    @include sm {
+      padding: 51px 0;
+      gap: 40px;
+    }
+    @include xs {
+      padding: 0;
+      gap: 20px;
+    }
+  }
   @include md {
     gap: 50px;
   }
@@ -30,6 +41,12 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    .about-page & {
+      gap: 12px;
+      @include sm {
+        gap: 10px;
+      }
+    }
     @include xs {
       width: 100%;
       text-align: center;
@@ -40,6 +57,11 @@
       font-weight: $weight_bold;
       color: darken($color: $setting_primary_color, $amount: 35%);
       margin-bottom: 16px;
+      .about-page & {
+        @include sm {
+          margin-bottom: 0;
+        }
+      }
       @include md {
         font-size: 34px;
       }
@@ -65,6 +87,11 @@
       font-size: 18px;
       font-weight: $weight_light;
       color: $setting_text_color;
+      .about-page & {
+        @include sm {
+          font-size: 14px;
+        }
+      }
       @include xs {
         font-size: 14px;
       }
@@ -75,6 +102,9 @@
       font-size: 18px;
       font-weight: $weight_bold;
       transition: all 0.5s ease-in-out;
+      .about-page & {
+        display: none;
+      }
       &:hover {
         color: $setting_secondary_color;
         transform: translateX(-20px);
@@ -87,11 +117,15 @@
     }
   }
   .about-video {
+    .about-page & {
+      @include xs {
+        bottom: 13%;
+      }
+    }
     @include xs {
-      bottom: 15%;
-      /* display: none; */
+      bottom: 16%;
       position: absolute;
-      right: 27%;
+      right: 30%;
     }
     .play-icon {
       display: flex;
@@ -106,6 +140,9 @@
       @include sm {
         width: 60px;
       }
+      @include xs {
+        width: 50px;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -119,6 +156,10 @@
         @include sm {
           width: 68px;
           height: 68px;
+        }
+        @include xs {
+          width: 58px;
+          height: 58px;
         }
       }
       img {
@@ -145,6 +186,15 @@
     height: 100%;
     z-index: -1;
     width: 62%;
+    .about-page & {
+      aspect-ratio: 62% / 595;
+      @include sm {
+        left: -20px;
+      }
+      @include xs {
+        left: 18px;
+      }
+    }
     @include xs {
       position: relative;
       transform: translateX(-20%);
