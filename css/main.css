@@ -379,6 +379,11 @@ iframe {
   border-radius: 16px;
   border-top-left-radius: 135px;
 }
+@media (max-width: 767px) {
+  .main-cont .main-imgs .left-img img {
+    border-top-left-radius: 80px;
+  }
+}
 .main-cont .main-imgs .main-svg {
   position: absolute;
   display: flex;
@@ -1238,6 +1243,7 @@ iframe {
   .why-us-cont {
     padding: 50px 30px;
     gap: 20px;
+    border-radius: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -2127,7 +2133,8 @@ button[aria-selected=true] {
 }
 @media (max-width: 767px) {
   .articles-cont .articles-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
 
@@ -2137,6 +2144,11 @@ button[aria-selected=true] {
   position: relative;
   border: 2px solid #e3e3e3;
   transition: all 0.5s ease;
+}
+@media (max-width: 767px) {
+  .articles-item {
+    overflow: hidden;
+  }
 }
 .articles-item .item-box {
   padding: 20px 20px 13px;
@@ -2154,6 +2166,8 @@ button[aria-selected=true] {
 @media (max-width: 767px) {
   .articles-item .item-box {
     align-items: center;
+    padding: 12px 5px 8px;
+    gap: 8px;
   }
 }
 .articles-item .item-box .article-p {
@@ -2170,6 +2184,7 @@ button[aria-selected=true] {
 @media (max-width: 767px) {
   .articles-item .item-box .article-p {
     text-align: center;
+    font-size: 11px;
   }
 }
 .articles-item .item-box .article-date-line {
@@ -2181,8 +2196,18 @@ button[aria-selected=true] {
   font-size: 20px;
   color: #fc924f;
 }
+@media (max-width: 767px) {
+  .articles-item .item-box .article-date-line i {
+    font-size: 18px;
+  }
+}
 .articles-item .item-box .article-date-line .article-date {
   color: #3e3e3e;
+}
+@media (max-width: 767px) {
+  .articles-item .item-box .article-date-line .article-date {
+    font-size: 14px;
+  }
 }
 .articles-item .article-hover {
   position: absolute;
@@ -2215,6 +2240,15 @@ button[aria-selected=true] {
 @media (max-width: 991px) {
   .articles-item .article-hover .article-btn {
     margin-bottom: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .articles-item .article-hover .article-btn {
+    font-size: 14px;
+    width: calc(100% - 12px);
+    height: 38px;
+    padding: 0;
+    margin-bottom: 10px;
   }
 }
 .articles-item .article-hover .article-btn:hover {
@@ -3038,7 +3072,7 @@ footer {
   .footer-cont .nav-list {
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: start;
+    justify-content: center;
   }
   .footer-cont .nav-list li {
     width: calc(33% - 10px);
@@ -3058,6 +3092,11 @@ footer {
   background-color: #fc924f;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+@media (max-width: 767px) {
+  .footer-cont .nav-list .active::before {
+    display: none;
+  }
 }
 .footer-cont .contact-menue {
   display: flex;
@@ -3230,6 +3269,7 @@ footer {
     grid-template-columns: 1fr;
     gap: 16px;
     border-radius: 16px;
+    padding: 40px 30px;
   }
 }
 .owr-services-cont .owr-services-svg {

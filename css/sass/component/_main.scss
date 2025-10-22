@@ -127,6 +127,9 @@
         display: flex;
         border-radius: 16px;
         border-top-left-radius: 135px;
+        @include xs {
+          border-top-left-radius: 80px;
+        }
       }
     }
     .main-svg {
