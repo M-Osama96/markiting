@@ -1,0 +1,14 @@
+.single-service-img {
+  // margin-top: 140px;
+  transform: translateY(140px);
+  @include sm {
+    transform: translateY(40px);
+  }
+}
+.single-service-img-cont {
+  border-radius: 24px;
+  overflow: hidden;
+  @include sm {
+    border-radius: 16px;
+  }
+}

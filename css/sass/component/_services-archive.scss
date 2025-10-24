@@ -11,119 +11,117 @@
   @include sm {
     grid-template-columns: repeat(3, 1fr);
   }
-  @include xs {
+  @include xxs {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-}
-.services-wraper {
-  position: relative;
-  transition: all 0.5s ease-in-out;
+  .services-wraper {
+    position: relative;
 
-  &:hover {
-    .services-item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      max-height: calc(100% + 5px);
-    }
-  }
-  .services-item {
-    background-color: #fff;
-    border: 1.28px solid #f1e7fe;
-    border-radius: 20px;
-    padding: 25px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 86px;
-    transition: all 0.5s ease-in-out;
-    max-height: 100%;
-    height: auto;
-    @include md {
-      gap: 86px;
-    }
-    @include xs {
-      gap: 40px;
-      padding: 15px 12px;
-      border-radius: 12px;
-    }
     &:hover {
-      background-color: $setting_primary_color;
-
-      .item-p {
-        color: #fff;
-      }
-      .services-line .services-arrow {
-        border-radius: 50%;
-      }
-      .services-line .services-arrow i {
-        transform: rotate(0);
+      .services-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: calc(100% + 5px);
       }
     }
-    &:hover .services-icon i {
-      &::before {
-        font-size: 48px;
-        @include xs {
-          font-size: 30px;
-        }
-      }
-    }
-
-    .services-line {
+    .services-item {
+      background-color: #fff;
+      border: 1.28px solid #f1e7fe;
+      border-radius: 20px;
+      padding: 25px 20px;
       display: flex;
-      justify-content: space-between;
-      width: 100%;
+      flex-direction: column;
       align-items: center;
-      .services-icon {
-        i {
-          font-size: 42px;
-          color: $setting_secondary_color;
-          @include xs {
-            font-size: 28px;
-          }
-          &::before {
-            transition: all 0.5s ease-in-out;
-          }
-        }
-      }
-      .services-arrow {
-        width: 51px;
-        height: 51px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        border: 1px solid $setting_primary_color;
-        background-color: #fff;
-        transition: all 0.5s ease-in-out;
-        @include xs {
-          width: 30px;
-          height: 30px;
-        }
-        i {
-          color: $setting_primary_color;
-          transform: rotate(45deg);
-          font-size: 24px;
-          transition: all 0.5s ease-in-out;
-          @include xs {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-    .item-p {
-      font-size: 20px;
-      font-weight: $weight_semibold;
-      color: $setting_text_color;
+      justify-content: center;
+      gap: 86px;
       transition: all 0.5s ease-in-out;
+      //   aspect-ratio: 268/281;
       @include md {
-        font-size: 14px;
+        gap: 86px;
       }
       @include xs {
-        font-size: 12px;
+        gap: 40px;
+        padding: 15px 12px;
+        border-radius: 12px;
+      }
+      &:hover {
+        background-color: $setting_primary_color;
+
+        .item-p {
+          color: #fff;
+        }
+        .services-line .services-arrow {
+          border-radius: 50%;
+        }
+        .services-line .services-arrow i {
+          transform: rotate(0);
+        }
+      }
+      &:hover .services-icon i {
+        &::before {
+          font-size: 48px;
+          @include xs {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .services-line {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        .services-icon {
+          i {
+            font-size: 42px;
+            color: $setting_secondary_color;
+            @include xs {
+              font-size: 28px;
+            }
+            &::before {
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+        .services-arrow {
+          width: 51px;
+          height: 51px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          border: 1px solid $setting_primary_color;
+          background-color: #fff;
+          transition: all 0.5s ease-in-out;
+          @include xs {
+            width: 30px;
+            height: 30px;
+          }
+          i {
+            color: $setting_primary_color;
+            transform: rotate(45deg);
+            font-size: 24px;
+            transition: all 0.5s ease-in-out;
+            @include xs {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .item-p {
+        font-size: 20px;
+        font-weight: $weight_semibold;
+        color: $setting_text_color;
+        transition: all 0.5s ease-in-out;
+        @include md {
+          font-size: 14px;
+        }
+        @include xs {
+          font-size: 12px;
+        }
       }
     }
   }
