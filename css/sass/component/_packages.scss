@@ -20,6 +20,18 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    .first-package & {
+      padding: 40px 40px 40px 10px;
+      @include xs {
+        padding: 40px;
+      }
+    }
+    .second-package & {
+      background-color: darken($color: $setting_primary_color, $amount: 35%);
+    }
+    .third-package & {
+      background-color: darken($color: $setting_text_color, $amount: 35%);
+    }
     @include sm {
       width: 100%;
       align-items: center;
@@ -37,6 +49,12 @@
       font-weight: $weight_bold;
       color: darken($color: $setting_primary_color, $amount: 35%);
       margin-bottom: 0;
+      .second-package & {
+        color: #fff;
+      }
+      .third-package & {
+        color: #fff;
+      }
       @include md {
         font-size: 34px;
       }
