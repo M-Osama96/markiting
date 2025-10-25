@@ -395,6 +395,12 @@ iframe {
   height: 141px;
   transform: translate(-58%, -40%);
 }
+@media (max-width: 767px) {
+  .main-cont .main-imgs .main-svg {
+    font-size: 36px;
+    height: 40px;
+  }
+}
 @media (max-width: 991px) {
   .main-cont .main-imgs .main-svg {
     transform: translate(-68%, -40%);
@@ -407,15 +413,13 @@ iframe {
     transform: translate(-50%, -40%);
   }
 }
-.main-cont .main-imgs .main-svg:hover img {
-  transform: rotate(360deg);
-}
 .main-cont .main-imgs .main-svg img {
   position: absolute;
   width: 100%;
   height: 100%;
   transition: all 10s ease-in-out;
   transform-origin: center;
+  animation: spin 12s linear infinite;
 }
 .main-cont .main-imgs .main-svg .fifteen-years {
   display: flex;
@@ -431,12 +435,6 @@ iframe {
   font-weight: 700;
   height: 55px;
 }
-@media (max-width: 767px) {
-  .main-cont .main-imgs .main-svg .fifteen-years .fifteen {
-    font-size: 36px;
-    height: 40px;
-  }
-}
 .main-cont .main-imgs .main-svg .fifteen-years .year {
   margin: 0;
   font-size: 16px;
@@ -450,6 +448,14 @@ iframe {
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .main-header {
   margin-top: 24px;
 }

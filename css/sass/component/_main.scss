@@ -143,6 +143,10 @@
       width: 141px;
       height: 141px;
       transform: translate(-58%, -40%);
+      @include xs {
+        font-size: 36px;
+        height: 40px;
+      }
       @include sm {
         transform: translate(-68%, -40%);
       }
@@ -151,23 +155,20 @@
         height: 101px;
         transform: translate(-50%, -40%);
       }
-      &:hover {
-        img {
-          transform: rotate(360deg);
-        }
-      }
       img {
         position: absolute;
         width: 100%;
         height: 100%;
         transition: all 10s ease-in-out;
         transform-origin: center;
+        animation: spin 12s linear infinite;
       }
       .fifteen-years {
         display: flex;
         flex-direction: column;
         position: relative;
         z-index: 2;
+
         .fifteen {
           text-align: center;
           margin-bottom: 0;
@@ -175,10 +176,6 @@
           font-size: 48px;
           font-weight: $weight_bold;
           height: 55px;
-          @include xs {
-            font-size: 36px;
-            height: 40px;
-          }
         }
         .year {
           margin: 0;
@@ -191,5 +188,13 @@
         }
       }
     }
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
