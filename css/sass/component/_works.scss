@@ -9,7 +9,13 @@
     font-size: 40px;
     font-weight: $weight_bold;
     color: darken($color: $setting_primary_color, $amount: 35%);
-    margin-bottom: 32;
+    margin-bottom: 32px;
+    .works-page & {
+      text-align: center;
+    }
+    .single-work-page & {
+      text-align: center;
+    }
     @include md {
       font-size: 34px;
     }
@@ -27,6 +33,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 48px;
+    .works-page & {
+      justify-content: center;
+    }
+    .single-work-page & {
+      justify-content: center;
+    }
+
     @include sm {
       flex-direction: column;
       gap: 20px;
@@ -117,10 +130,15 @@
     border: 2px solid lighten($color: $setting_primary_color, $amount: 45%);
     border-radius: 8px;
     position: relative;
+    transition: all 0.5s ease-in-out;
     img {
       height: auto;
     }
     &:hover {
+      border-color: $setting_primary_color;
+      img {
+        transform: scale(1.03);
+      }
       .work-hover {
         bottom: 0;
       }
