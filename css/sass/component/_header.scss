@@ -17,7 +17,7 @@
     @include sm {
       display: flex;
       margin-inline-end: 10px;
-      z-index: 100;
+      z-index: 113;
       font-size: 28px;
       color: $setting_text_color;
       transition: all 0.5s ease-in-out;
@@ -35,7 +35,7 @@
   .logo {
     display: flex;
     height: 34px;
-    z-index: 96;
+    z-index: 111;
     @include xs {
       height: 30px;
     }
@@ -49,7 +49,7 @@
     width: 100vw;
     background-color: $setting_text_color;
     opacity: 98%;
-    z-index: 94;
+    z-index: 101;
     transition: all 0.5s ease-in-out;
     @include sm {
       display: flex;
@@ -64,7 +64,7 @@
       top: 0;
       height: 100vh;
       width: 100vw;
-      z-index: 95;
+      z-index: 102;
       inset-inline-start: 0;
       inset-inline-start: -100vw;
       padding: 120px 0 40px;
@@ -116,7 +116,7 @@
     @include sm {
       position: relative;
       margin-inline-start: auto;
-      z-index: 99;
+      z-index: 116;
     }
 
     .lang-link {
