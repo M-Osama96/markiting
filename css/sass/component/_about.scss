@@ -119,11 +119,11 @@
   .about-video {
     .about-page & {
       @include xs {
-        bottom: 13%;
+        bottom: 14%;
       }
     }
     @include xs {
-      bottom: 16%;
+      bottom: 17%;
       position: absolute;
       right: 30%;
     }

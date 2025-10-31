@@ -19,6 +19,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  .Employment & {
+    gap: 12px;
+  }
   @include xs {
     align-items: center;
   }
@@ -27,6 +30,9 @@
     font-weight: $weight_bold;
     color: darken($color: $setting_primary_color, $amount: 35%);
     margin-bottom: 12px;
+    .Employment-page & {
+      font-size: 28px;
+    }
     @include md {
       font-size: 34px;
     }
@@ -42,25 +48,33 @@
     border-radius: 16px;
     background-color: #f6f6f6;
     position: relative;
-    max-height: 66px;
     transition: all 0.4s ease;
     border: 2px solid transparent;
     overflow: hidden;
+    .Employment-page & {
+      padding: 19px 16px;
+      @include md {
+        padding: 10px;
+      }
+    }
     @include xs {
       padding: 8px;
       border-radius: 8px;
-      max-height: 60px;
     }
     @include xxs {
-      max-height: 66px;
     }
     &.active-a {
       max-height: 300px;
       border: 2px solid $setting_primary_color;
-      hr {
-        opacity: 0.2;
-        visibility: visible;
-        margin: 12px 0;
+
+      .accordion-header {
+        border-bottom: 1px solid #45454533;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        @include xs {
+          padding-bottom: 8px;
+          margin-bottom: 8px;
+        }
       }
       .a-header-icon {
         i {
@@ -74,6 +88,12 @@
       justify-content: space-between;
       gap: 32px;
       width: 100%;
+      transition: all 0.4s ease;
+      border-color: #45454533;
+      .Employment-page & {
+        gap: 20px;
+      }
+
       @include xxs {
         gap: 10px;
       }
@@ -81,6 +101,13 @@
         font-size: 18px;
         color: $setting_text_color;
         font-weight: $weight_regular;
+        text-align: start;
+        .Employment-page & {
+          font-size: 16px;
+          @include xxs {
+            font-size: 14px;
+          }
+        }
         @include xxs {
           font-size: 14px;
         }
@@ -97,19 +124,11 @@
         i {
           color: $setting_primary_color;
           font-size: 20px;
+          transition: all 0.2s ease;
         }
       }
     }
-    hr {
-      border: none;
-      height: 1px;
-      background-color: #454545;
-      opacity: 20%;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.4s ease;
-      overflow: hidden;
-    }
+
     .accordion-content {
       max-height: 0;
       overflow: hidden;
