@@ -55,6 +55,7 @@
         background-color: lighten($color: $setting_primary_color, $amount: 50%);
         border: 1px solid lighten($color: $setting_primary_color, $amount: 40%);
         border-radius: 8px;
+        background-color: #f6f6f6;
         @include xxs {
           font-size: 16px;
         }
@@ -71,6 +72,8 @@
         pointer-events: none;
         transition: 0.3s ease;
         background-color: lighten($color: $setting_primary_color, $amount: 50%);
+        color: #3e3e3e;
+        background-color: #f6f6f6;
       }
 
       .form-group input:focus + label,
@@ -78,12 +81,28 @@
         top: 9px;
         font-size: 12px;
         color: #06234d;
+        background-color: transparent;
       }
       .form-group input:focus {
         border-color: $setting_secondary_color;
+        background-color: transparent;
+      }
+      .form-group input:not(:placeholder-shown) {
+        background-color: transparent;
+        border-color: $setting_secondary_color;
+      }
+      .form-group:focus {
+        background-color: transparent;
       }
       .select {
         position: relative;
+        select {
+          &.selected {
+            border-color: $setting_secondary_color;
+            background-color: transparent;
+          }
+        }
+
         select:has([hidden]:checked) {
           color: #000000;
           option {
@@ -107,6 +126,14 @@
         min-height: 64px;
         &::placeholder {
           color: #030303;
+        }
+        &:focus {
+          background-color: transparent;
+          border-color: $setting_secondary_color;
+        }
+        &:not(:placeholder-shown) {
+          background-color: transparent;
+          border-color: $setting_secondary_color;
         }
       }
       button {

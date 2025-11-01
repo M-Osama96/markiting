@@ -98,3 +98,9 @@ if (document.querySelectorAll(".accordion-header") !== null) {
     });
   });
 }
+if (document.querySelectorAll("mySelect") !== null) {
+  const select = document.getElementById("mySelect");
+  select.addEventListener("change", () => {
+    if (select.value) select.classList.add("selected");
+  });
+}

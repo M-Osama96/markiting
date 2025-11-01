@@ -4838,6 +4838,7 @@ footer {
   background-color: white;
   border: 1px solid rgb(229.6987951807, 212.1686746988, 252.8313253012);
   border-radius: 8px;
+  background-color: #f6f6f6;
 }
 @media (max-width: 575px) {
   .Employment-cont .Employment-form form .form-group input,
@@ -4857,23 +4858,43 @@ footer {
   pointer-events: none;
   transition: 0.3s ease;
   background-color: white;
+  color: #3e3e3e;
+  background-color: #f6f6f6;
 }
 .Employment-cont .Employment-form form .form-group input:not(:-moz-placeholder) + label {
   top: 9px;
   font-size: 12px;
   color: #06234d;
+  background-color: transparent;
 }
 .Employment-cont .Employment-form form .form-group input:focus + label,
 .Employment-cont .Employment-form form .form-group input:not(:placeholder-shown) + label {
   top: 9px;
   font-size: 12px;
   color: #06234d;
+  background-color: transparent;
 }
 .Employment-cont .Employment-form form .form-group input:focus {
   border-color: #fc924f;
+  background-color: transparent;
+}
+.Employment-cont .Employment-form form .form-group input:not(:-moz-placeholder) {
+  background-color: transparent;
+  border-color: #fc924f;
+}
+.Employment-cont .Employment-form form .form-group input:not(:placeholder-shown) {
+  background-color: transparent;
+  border-color: #fc924f;
+}
+.Employment-cont .Employment-form form .form-group:focus {
+  background-color: transparent;
 }
 .Employment-cont .Employment-form form .select {
   position: relative;
+}
+.Employment-cont .Employment-form form .select select.selected {
+  border-color: #fc924f;
+  background-color: transparent;
 }
 .Employment-cont .Employment-form form .select select:has([hidden]:checked) {
   color: #000000;
@@ -4901,6 +4922,18 @@ footer {
 }
 .Employment-cont .Employment-form form textarea::placeholder {
   color: #030303;
+}
+.Employment-cont .Employment-form form textarea:focus {
+  background-color: transparent;
+  border-color: #fc924f;
+}
+.Employment-cont .Employment-form form textarea:not(:-moz-placeholder) {
+  background-color: transparent;
+  border-color: #fc924f;
+}
+.Employment-cont .Employment-form form textarea:not(:placeholder-shown) {
+  background-color: transparent;
+  border-color: #fc924f;
 }
 .Employment-cont .Employment-form form button {
   display: flex;
@@ -5077,9 +5110,11 @@ footer {
 }
 .contact-cont .contact-form form .form-group input:not(:-moz-placeholder) {
   background-color: transparent;
+  border-color: #fc924f;
 }
 .contact-cont .contact-form form .form-group input:not(:placeholder-shown) {
   background-color: transparent;
+  border-color: #fc924f;
 }
 .contact-cont .contact-form form .form-group:focus {
   background-color: transparent;
@@ -5113,6 +5148,18 @@ footer {
 }
 .contact-cont .contact-form form textarea::placeholder {
   color: #030303;
+}
+.contact-cont .contact-form form textarea:focus {
+  background-color: transparent;
+  border-color: #fc924f;
+}
+.contact-cont .contact-form form textarea:not(:-moz-placeholder) {
+  background-color: transparent;
+  border-color: #fc924f;
+}
+.contact-cont .contact-form form textarea:not(:placeholder-shown) {
+  background-color: transparent;
+  border-color: #fc924f;
 }
 .contact-cont .contact-form form button {
   display: flex;

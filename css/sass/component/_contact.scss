@@ -106,6 +106,7 @@
       }
       .form-group input:not(:placeholder-shown) {
         background-color: transparent;
+        border-color: $setting_secondary_color;
       }
       .form-group:focus {
         background-color: transparent;
@@ -135,6 +136,14 @@
         min-height: 64px;
         &::placeholder {
           color: #030303;
+        }
+        &:focus {
+          background-color: transparent;
+          border-color: $setting_secondary_color;
+        }
+        &:not(:placeholder-shown) {
+          background-color: transparent;
+          border-color: $setting_secondary_color;
         }
       }
       button {
