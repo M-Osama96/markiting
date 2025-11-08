@@ -20,6 +20,7 @@
     border-radius: 16px;
     position: relative;
     border: 2px solid #f6f6f6;
+    transition: all 0.5s ease-in-out;
     @include sm {
       padding: 20px;
       border-radius: 12px;
@@ -51,6 +52,11 @@
       svg {
         width: 80px;
         height: 80px;
+        transition: all 0.5s ease-in-out;
+        path {
+          fill: lighten($color: $setting_primary_color, $amount: 40%);
+          transition: all 0.5s ease-in-out;
+        }
         @include md {
           width: 70px;
           height: 70px;
@@ -96,6 +102,15 @@
         margin: 0;
         font-size: 16px;
         font-weight: $weight-light;
+      }
+    }
+    &:hover {
+      border: 2px solid $setting_primary_color;
+      svg {
+        transform: rotate(180deg);
+        path {
+          fill: lighten($color: $setting_primary_color, $amount: 20%);
+        }
       }
     }
   }

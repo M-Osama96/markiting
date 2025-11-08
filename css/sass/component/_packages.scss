@@ -113,6 +113,7 @@
 .Packages-item {
   padding: 8px;
   box-shadow: 0px 4px 24px 0px #1a1a1a0a;
+  border: 1px solid #f6f6f6;
   border-radius: 16px;
   .package-type {
     padding: 16px 21px;
@@ -177,7 +178,7 @@
       gap: 4px;
       i {
         color: #22c55d;
-        font-size: 24px;
+        font-size: 16px;
       }
       .adv-p {
         margin: 0;
@@ -244,6 +245,7 @@
         font-size: 14px;
         color: #fff;
         font-weight: $weight_semibold;
+        transform: translate(1px, 1px);
       }
     }
     .package-name {

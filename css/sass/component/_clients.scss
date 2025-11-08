@@ -23,6 +23,9 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
+  @include xs {
+    justify-content: center;
+  }
   .clients-title {
     font-size: 40px;
     font-weight: $weight_bold;
@@ -35,30 +38,44 @@
     }
     @include xs {
       font-size: 30px;
+      text-align: center;
     }
   }
-  .clients-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 43px;
-    border: 1px solid $setting_primary_color;
-    border-radius: 8px;
-    background-color: #fff;
-    color: $setting_primary_color;
-    font-weight: $weight_semibold;
-    max-width: 191px;
-    transition: all 0.5s ease;
-    padding: 0 31px;
-    position: relative;
-    z-index: 3;
-    @include md {
-      padding: 20px;
+}
+.clients-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  border: 1px solid $setting_primary_color;
+  border-radius: 8px;
+  background-color: #fff;
+  color: $setting_primary_color;
+  font-weight: $weight_semibold;
+  max-width: 191px;
+  transition: all 0.5s ease;
+  padding: 0 31px;
+  position: relative;
+  z-index: 3;
+  @include md {
+    padding: 20px;
+  }
+  &:hover {
+    background-color: $setting_primary_color;
+    color: #fff;
+    border-color: #fff;
+  }
+  &.lg {
+    @include xs {
+      display: none;
     }
-    &:hover {
-      background-color: $setting_primary_color;
-      color: #fff;
-      border-color: #fff;
+  }
+  &.xs {
+    display: none;
+    @include xs {
+      display: flex;
+      margin: auto;
+      margin-top: 20px;
     }
   }
 }
@@ -190,6 +207,7 @@
       transform: rotate(0deg);
       &:hover {
         transform: rotate(-15deg);
+        border: 3px solid $setting_primary_color;
       }
     }
   }

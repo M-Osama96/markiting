@@ -192,6 +192,7 @@
           font-size: 16px;
           font-weight: $weight_semibold;
           color: $setting_text_color;
+          transition: all 0.5s ease-in-out;
           @include md {
             font-size: 14px;
           }
